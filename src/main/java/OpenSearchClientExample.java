@@ -30,8 +30,10 @@ public class OpenSearchClientExample {
     public static void main(String[] args) throws IOException {
 
         //Point to keystore with appropriate certificates for security.
-//        System.setProperty("javax.net.ssl.trustStore", "/full/path/to/keystore");
-//        System.setProperty("javax.net.ssl.trustStorePassword", "password-to-keystore");
+//        System.setProperty("javax.net.ssl.trustStore", "/usr/lib/jvm/java-14-openjdk-amd64/lib/security/cacerts");
+//        System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
+        System.setProperty("javax.net.ssl.trustStore", "myTrustStore");
+        System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
 
         //Establish credentials to use basic authentication.
         //Only for demo purposes. Do not specify your credentials in code.
