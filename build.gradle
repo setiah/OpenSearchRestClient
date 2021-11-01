@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+//apply plugin : "java"
+ext {
+    javaMainClass = "OpenSearchClientExample"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+task runWithJavaExec(type: JavaExec) {
+    group = "Execution"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = javaMainClass
+}
+
+dependencies {
+//    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.10.0'
+    implementation 'org.opensearch.client:opensearch-java:0.1.0'
+    implementation 'org.opensearch.client:opensearch-rest-high-level-client:1.1.0'
+
+}
+
