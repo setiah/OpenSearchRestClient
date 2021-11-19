@@ -1,5 +1,3 @@
-
-
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -29,11 +27,20 @@ public class OpenSearchClientExample {
 
     public static void main(String[] args) throws IOException {
 
-        //Point to keystore with appropriate certificates for security.
-//        System.setProperty("javax.net.ssl.trustStore", "/usr/lib/jvm/java-14-openjdk-amd64/lib/security/cacerts");
-//        System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
-        System.setProperty("javax.net.ssl.trustStore", "myTrustStore");
-        System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
+        /**
+         * Point to the truststore with root certificates.
+         */
+        // When using jvm truststore
+        {
+            // System.setProperty("javax.net.ssl.trustStore", "/usr/lib/jvm/java-14-openjdk-amd64/lib/security/cacerts");
+            // System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
+        }
+
+        // When using custom truststore
+        {
+            System.setProperty("javax.net.ssl.trustStore", "myTrustStore");
+            System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
+        }
 
         //Establish credentials to use basic authentication.
         //Only for demo purposes. Do not specify your credentials in code.

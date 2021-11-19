@@ -10,7 +10,6 @@ repositories {
     mavenCentral()
 }
 
-//apply plugin : "java"
 ext {
     javaMainClass = "OpenSearchClientExample"
 }
@@ -27,9 +26,7 @@ task runWithJavaExec(type: JavaExec) {
 }
 
 dependencies {
-//    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.10.0'
-    implementation 'org.opensearch.client:opensearch-java:0.1.0'
+//    implementation 'org.opensearch.client:opensearch-java:0.1.0'
     implementation 'org.opensearch.client:opensearch-rest-high-level-client:1.1.0'
-
 }
 
