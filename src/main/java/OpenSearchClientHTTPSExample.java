@@ -38,7 +38,8 @@ public class OpenSearchClientHTTPSExample {
 
         // When using custom truststore
         {
-            System.setProperty("javax.net.ssl.trustStore", "myTrustStore");
+            // replace /home/ubuntu/OpenSearchRestClient/myTrustStore with your custom truststore path
+            System.setProperty("javax.net.ssl.trustStore", "/home/ubuntu/OpenSearchRestClient/myTrustStore");
             System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
         }
 
