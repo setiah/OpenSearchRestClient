@@ -23,7 +23,7 @@ import org.opensearch.common.settings.Settings;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class OpenSearchClientExample {
+public class OpenSearchClientHTTPSExample {
 
     public static void main(String[] args) throws IOException {
 
